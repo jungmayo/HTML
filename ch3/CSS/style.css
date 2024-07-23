@@ -1,0 +1,126 @@
+/*1번*/
+h1{
+    color: #4A90E2;
+}
+/*1번*/
+header{
+    background-color: #F5F5F5;
+}
+/*1번*/
+span.highlight{
+    color: #F39C12;
+}
+/*1번*/
+nav a {
+    color: #E74C3C;
+}
+/*1번*/
+.intro {
+    background-color: #d7ecf3;
+}
+/*6번*/
+h2.title {
+    color:#27AE60;
+}
+/*7번*/
+.article:first-child {
+    background-color: #aed8f3;
+}
+/*8번*/
+div.article:nth-child(2){
+    background-color: #FAD7A0;
+}
+/*9번*/
+div.article > p {
+    color: #9B59B6;
+}
+/*10번*/
+section {
+    border: 1px dashed #d6e73c;
+
+}
+/*11번*/
+footer > a {
+    color: #34495E;
+
+}
+/*1번*/
+header li:nth-child(1) {
+    border: 1px solid #111;
+}
+/*1번*/
+header li:last-child{
+    border: 1px solid #111;
+}
+/*14번*/
+header > nav > ul > li {
+    background-color: #d6f1f1;
+}
+/*15번*/
+header nav li:nth-child(1) > a {
+    color: rgb(73, 73, 223);
+}
+/*1번*/
+header > nav > ul > li:nth-child(2) > a{
+    color: #0f0;
+}
+/*17번*/
+body > section {
+    border: 1px solid #BDC3C7;
+}
+/*18번*/
+.content h2 {
+    color: #2c8d1f;
+}
+/*19번*/
+header li {
+    list-style-type: square;
+}
+/*1번*/
+footer a:nth-of-type(1){
+    color: #27AE60;
+}
+/*21번*/
+section:nth-child(2) {
+    border: 2px dashed #16A085;
+}
+/*22번*/
+section:nth-child(3) {
+    background-color: #bbe1ee;
+}
+/*23번*/
+p:first-of-type{
+    color: #D35400;
+}
+/*24번*/
+p:last-of-type {
+    font-style: italic;
+    color: #2980B9;
+}
+
+/*25번*/
+.title + p {
+    background-color: #E8F4F8;
+}
+/*26번*/
+.title  ~ *{
+    color: #8E44AD;
+}
+/*27번*/
+h2:first-of-type{
+    color: #E67E22;
+}
+
+/*28번*/
+ol > li:nth-child(2n+1){
+    color: orange;
+}
+/*29번*/
+.intro:hover{
+    background-color: #E74C3C;
+}
+/*30번*/
+footer > a:last-child::after {
+    content: 'ⓒ';
+}
+
