@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS 기본선택자</title>
+
+        <!--
+        날짜 : 2024.07.22
+        이름 : 정지현
+        내용 : CSS 기본선택자 실습하기 -->
+
+        <style>
+            /*전체 선택자 (CSS)*/
+            * {
+                color: blue;
+            }
+            /*태그 선택자 (CSS)*/
+            h3{
+                color: red;
+            }
+            p{
+                color: green;
+            }
+
+            /*클래스 선택자 (CSS)*/
+            .hello {
+                color: greenyellow;
+            }
+
+            
+
+            /*아이디 선택자 (CSS)*/
+            #hello {
+                color: yellow;
+            }
+
+        </style>
+
+</head>
+<body>
+    <h3>1. CSS 기본 선택자</h3>
+
+    <p>Hello World</p>
+    <p class="hello">Hello World</p>
+    <p class="hello"> Hello World</p>
+    <p id="hello">Hello World</p> <!--유일값-->
+</body>
+</html>
