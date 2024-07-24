@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2. 가시속성</title>
+
+                <!--
+        날짜 : 2024.07.24
+        이름 : 정지현
+        내용 : 가시속성 실습하기 -->
+
+        <style>
+            div > span {background-color: orange;}
+            div > div {background-color: green; }
+
+            .box1 > span:nth-child(1){
+                display: none; /*공간까지 X*/
+            }
+            .box1 > span:nth-child(2){
+                visibility: hidden;
+            }
+            .box2 > span:nth-child(2){
+                display: block;
+                width: 100px;
+                height: 100px;
+            }
+        
+            /* display:inline */
+            .box3 > div {display: inline;}
+        
+        
+            /* inline block */
+            .box4 > div {
+                display: inline-block;
+                width: 100px;
+                height: 100px;
+            
+            }
+            /* overfolw */
+            .box5{
+                display: inline-block;
+                width: 200px;
+                height: 200px;
+                border: 1px solid black;
+                box-sizing: border-box;
+            }
+            .box5 > div {
+                width: 100px;
+                height: 300px;
+                background-color: orange;
+                border: 1px solid black;
+                box-sizing: border-box;
+            }
+            .box5-1 { overflow: visible;}
+            .box5-2 { overflow: scroll;}
+            .box5-3 { overflow: hidden;}
+        
+        
+        
+        
+        </style>
+
+</head>
+<body>
+    <h3>2. 가시속성</h3>
+
+    <h4>display:non</h4>
+    <div class="box1">
+        <span>SPAN1</span>
+        <span>SPAN2</span>
+        <span>SPAN3</span>
+
+    </div>
+
+    <h4>display:bolck</h4>
+    <div class="box2">
+        <span>SPAN1</span>
+        <span>SPAN2</span>
+        <span>SPAN3</span>
+
+    </div>
+
+    <h4>display:inline</h4>
+    <div class="box3">
+        <span>SPAN1</span>
+        <div>DIV2</div>
+        <span>SPAN3</span>
+    </div>
+
+    <h4>display:inline block</h4>
+    <div class="box4">
+        <span>SPAN1</span>
+        <div>DIV2</div>
+        <span>SPAN3</span>
+
+    </div>
+
+    <h4>display:overflow</h4>
+    <div class="box5 box5-1">
+        <div></div>
+       </div>
+
+
+
+    <div class="box5 box5-2">
+        <div></div>
+    </div>
+
+
+
+    <div class="box5 box5-3">
+        <div></div>
+    </div>
+
+
+</body>
+</html>
