@@ -144,6 +144,7 @@
             height: 182px;
             margin-top: 5px;
             padding: 20px;
+            box-sizing: border-box;
         }
         main > div > .qna > h3 {
             font-weight: bold;
@@ -160,9 +161,16 @@
            
         }
 
-      main > div > .qna > table td {
+        main > div > .qna > table td:nth-child(2) {
         display: inline-block;
+        width: 296px;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+        line-height: 20px;
       }
+      main > div > .qna > table a:hover {text-decoration: underline;}
+    
         main > section {
             overflow: hidden;
         }
@@ -174,14 +182,78 @@
             border: 1px solid green;
             box-sizing: border-box;
         }
+        main > section > aside > article {
+            width: 100%;
+            height: 204px;
+            padding: 10px;
+            overflow: hidden;
+        }
+        main > section > aside > h3 { font-weight: bold; font-size: 14px;}
+        main > section > aside > article > ul {margin-top: 6px;}
+        main > section > aside > article > ul > li {
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            overflow: hidden;
+            line-height: 20px;
+        }
+        main > section > aside > article > ul > li > a::before {
+            content : url('./Real113/ico_latest.gif');}
+        
+            main > section > aside > article > a {
+                display: block;
+                width: 100%;
+                height: 34px;
+                border: 1px solid #d9d9d9;
+                margin-top: 6px;
+                font-size: 0;
+                background-color: #f6f6f6;
+                background-position: 10px center;
+            }
+
+            main > section > aside > a:nth-of-type(1) {
+                background-image: url(./Real113/aside_quick_court.png);}
+            main > section > aside > a:nth-of-type(2) {
+                background-image: url(./Real113/aside_quick_google.png);}
+            main > section > aside > a:nth-of-type(3) {
+                background-image: url(./Real113/aside_quick_naver_map.png);}
+            main > section > aside > a:nth-of-type(4) {
+                background-image: url(./Real113/aside_quick_naver_subway.png);}
+
+                main > section > aside > a {
+                    position: relative;
+                    left: 1px;
+                    display: block;
+                    width: 195px;
+                    height: 83px;
+                    border: 1px solid #999;
+                    box-sizing: border-box;
+                    overflow: hidden;
+                    margin-top: 6px;
+                }
+
+                main > section > aside > a > img:nth-child(1){
+                    position:absolute; left : 10px; top: 10px;}
+                main > section > aside > a > img:nth-child(2){float: right;}
+
+                main > section > aside > .banner > img:nth-child(1){float:right;}
+                main > section > aside > .banner > img:nth-child(2){margin-left: 10px; margin-top: 30px;}
+                main > section > aside > .banner > a > img {margin-left: 10px; margin-top: 10px;}
+
         main > section > article {
             float: right;
             width: 800px;
             height: 250px;
             margin-top: 5px;
-            border: 1px solid green;
+            padding: 16px;
+            border: 1px solid #d7d7d7;
             box-sizing: border-box;
         }
+        main > section > article > h3 {
+            font-size: 14px;
+            font-weight: bold;
+        }
+        main > section > article > h3 > a {float : right}
+
         main > section > article > ul {
             width: 100%;
             height: auto;
@@ -197,6 +269,11 @@
             width: 150px;
             height: 130px;
         }
+        main > section > article > ul > li > a {
+            display: block;
+            text-align: center;
+        }
+        main > section > article > ul > li > a:hover {text-decoration: underline;}
 
         footer {
             width: 1000px;
@@ -287,27 +364,27 @@
                                     <td>20-05-13</td>
                                 </tr>
                                 <tr>
-                                    <img src="./Real113/ico_latest.gif" alt=">">
+                                    <td><img src="./Real113/ico_latest.gif" alt=">"></td>
                                     <td><a href="#">분양상품 중 문의드립니다. 빠른 답변 부탁드립니다. </a></td>
                                     <td>20-05-13</td>
                                 </tr>
                                 <tr>
-                                    <img src="./Real113/ico_latest.gif" alt=">">
+                                    <td><img src="./Real113/ico_latest.gif" alt=">"></td>
                                     <td><a href="#">분양상품 중 문의드립니다. 빠른 답변 부탁드립니다. </a></td>
                                     <td>20-05-13</td>
                                 </tr>
                                 <tr>
-                                    <img src="./Real113/ico_latest.gif" alt=">">
+                                    <td><img src="./Real113/ico_latest.gif" alt=">"></td>
                                     <td><a href="#">분양상품 중 문의드립니다. 빠른 답변 부탁드립니다. </a></td>
                                     <td>20-05-13</td>
                                 </tr>
                                 <tr>
-                                    <img src="./Real113/ico_latest.gif" alt=">">
+                                    <td><img src="./Real113/ico_latest.gif" alt=">"></td>
                                     <td><a href="#">분양상품 중 문의드립니다. 빠른 답변 부탁드립니다. </a></td>
                                     <td>20-05-13</td>
                                 </tr>
                                 <tr>
-                                    <img src="./Real113/ico_latest.gif" alt=">">
+                                    <td><img src="./Real113/ico_latest.gif" alt=">"></td>
                                     <td><a href="#">분양상품 중 문의드립니다. 빠른 답변 부탁드립니다. </a></td>
                                     <td>20-05-13</td>
                                 </tr>
