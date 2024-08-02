@@ -45,10 +45,82 @@
       color: rgb(53, 53, 199);
       text-decoration: underline;
     }
-/*마진 69*/
+
+    section {
+      width: 800px;
+      height: 180px;
+      border: 1px solid red;
+      box-sizing: border-box;
+      margin: 69px auto;
+    }
+
+
+    main > section > nav {
+      position: relative;
+      width: 100%;
+      height: 40px;
+      border: 1px solid black;
+      box-sizing: border-box;
+    }
+    main > section .List span {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+    }
+    main > section .Search {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+    }
+    main > section .Table {
+      border-collapse: collapse; 
+      width: 100%;
+      height: 100px;
+      border: 1px solid black;
+      box-sizing: border-box;
+    }
+
+    .Table thead {
+      width: 100%;
+      height: 41.5px;
+      background-color: aquamarine;
+    }
+
+    .Table tbody > tr{
+      width: 100%;
+      height: 58.5px;
+      text-align: center;
+    }
+    .Table tbody > tr a:hover {
+      color: rgb(53, 53, 199);
+      text-decoration: underline;
+    }
+
+    
+  
+  
+    main > section .numberList {
+      width: 100%;
+      height: 40px;
+      border: 1px solid orange;
+      box-sizing: border-box;
+      display: flex; /* Flexbox 사용 */
+      justify-content: center; /* 가로 중앙 정렬 */
+      align-items: center;
+    }
+    .numberList > button {
+      padding: 5px 10px;
+      margin: 0 2px;
+    }
+    footer {
+      width: 800px;
+      height: 17px;
+      border: 1px solid red;
+      box-sizing: border-box;
+      margin: 0 auto;
+    }
+/*마진 69 41.5 41*/
   </style>
-
-
 </head>
 <body>
     <div id="wrapper">
@@ -86,7 +158,7 @@
                 <tbody>
                   <tr>
                     <td>1</td>
-                    <td>테스트 제목입니다.[3]</td>
+                    <td><a href="#">테스트 제목입니다.[3]</a></td>
                     <td>길동이</td>
                     <td>20-05-12</td>
                     <td>12</td>
@@ -94,12 +166,12 @@
                 </tbody>
                 </table>
             <div class="numberList">
-                <a href="#">이전</a>
-                <a href="#">1</a>
-                <a href="#">2</a>
-                <a href="#">3</a>
-                <a href="#">다음</a>
-                <a href="#">글쓰기</a>
+              <button><a href="#">이전</a></button>
+              <button><a href="#">1</a></button>
+              <button><a href="#">2</a></button>
+              <button> <a href="#">3</a></button>
+              <button><a href="#">다음</a></button>
+              <button> <a href="#">글쓰기</a></button>
             </div>
         </section>
     </main>
