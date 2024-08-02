@@ -19,60 +19,44 @@
         height: 100%;
         border: 1px solid red;
         box-sizing: border-box;
+        
     }
 
     /* 헤더 스타일 */
-    .header {
-      background-color: #007bff;
-      color: #fff;
-      padding: 20px;
-      text-align: center;
+    header {
+      position: relative;
+      width: 800px;
+      height: 35px;
+      border: 1px solid orange;
+      box-sizing: border-box;
+      margin: 0 auto;
     }
-
-    /* 게시판 테이블 스타일 */
-    .board-table {
-      width: 100%;
-      border-collapse: collapse;
-      margin-top: 20px;
+    header span {
+      position: absolute;
+      font-weight: bold;
+      top: 10px;
     }
-
-    .board-table th, .board-table td {
-      padding: 10px;
-      border-bottom: 1px solid #ddd;
+    header p {
+      position: absolute;
+      top: 10px;
+      right: 10px;
     }
-
-    .board-table th {
-      background-color: #f2f2f2;
+    header p > a:hover {
+      color: rgb(53, 53, 199);
+      text-decoration: underline;
     }
-
-    /* 페이지네이션 스타일 */
-    .pagination {
-      display: flex;
-      justify-content: center;
-      margin-top: 20px;
-    }
-
-    .pagination a {
-      color: #007bff;
-      padding: 8px 16px;
-      text-decoration: none;
-      transition: background-color 0.3s ease;
-    }
-
-    .pagination a:hover {
-      background-color: #007bff;
-      color: #fff;
-    }
+/*마진 69*/
   </style>
 
 
 </head>
 <body>
+    <div id="wrapper">
     <header>
         <div>
             <span>Board System</span>
             <p>홍길동님 반갑습니다
-                <a href="#">로그아웃</a>
+                <a href="#">[로그아웃]</a>
             </p>
         </div>
     </header>
@@ -123,5 +107,6 @@
         <span>Copyrightⓒ 김철학(개발에 반하다.)</span>
         <span>v1.0.1</span>
     </footer>
+  </div>
 </body>
 </html>
