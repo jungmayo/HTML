@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이용약관</title>
+</head>
+
+<style>
+    *{
+        margin: 0px;
+        padding: 0px;
+        font: normal 12px '맑은고딕';
+    }
+    ul,ol {list-style: none;}
+    a {text-decoration: none; color: #111;}
+
+    #wrapper {
+        width: 100%;
+        height: 100%;
+    }
+
+    header {
+        width: 790px;
+        height: 95px;
+        margin: 0 auto;
+
+    }
+    header > div > span {
+        font-weight: bold;
+        font-size: 10.13px;
+        line-height: 12.25px;
+       
+    }
+
+    main {
+        width: 100%;
+        height: auto;
+    }
+    main section { 
+        position: relative;
+        width: 600px;
+        height: 270px;
+        margin: 0 auto;
+    }
+    main > .Main1 div > p { /*사이트 이용약관*/
+        position: absolute;
+        font-size: 12px;
+        line-height: 14.52px;
+        font-weight: bold;
+        left: 0px;
+        top: 8.25px;
+    }
+    main > .Main1 div:nth-of-type(2) { /*검은박스*/
+        position: absolute;
+        width: 600px;
+        height: 237px; /*235.5*/
+        top: 33px;
+        border: 1px solid black;
+        box-sizing: border-box;
+        
+        
+    }
+    main > .Main1 article { /*하얀박스*/
+        position: absolute;
+        width: 586px;
+        height: 200px;
+        top: 7px;
+        left: 6.5px;
+        border: 1px solid rgb(228, 234, 236);
+        box-sizing: border-box;
+        background-color: rgb(247, 247, 247);
+
+    }
+    main > .Main1 > section > div:nth-child(2) > div { /*체크박스*/
+        position: absolute;
+        bottom: 2px;
+        right: 10px;
+        
+    }
+    main > .Main1 > section > div:nth-child(2) label { /*동의합니다*/
+        font-size: 12px;
+        line-height: 14.52px;
+        font-weight: bold;
+    }
+
+
+
+
+    main > .Main2 div > p { /*사이트 이용약관*/
+        position: absolute;
+        font-size: 12px;
+        line-height: 14.52px;
+        font-weight: bold;
+        left: 0px;
+        top: 8.25px;
+    }
+    main > .Main2 div:nth-of-type(2) { /*검은박스*/
+        position: absolute;
+        width: 600px;
+        height: 237px; /*235.5*/
+        top: 33px;
+        border: 1px solid black;
+        box-sizing: border-box;
+        
+        
+    }
+    main > .Main2 article { /*하얀박스*/
+        position: absolute;
+        width: 586px;
+        height: 200px;
+        top: 7px;
+        left: 6.5px;
+        border: 1px solid rgb(228, 234, 236);
+        box-sizing: border-box;
+        background-color: rgb(247, 247, 247);
+
+    }
+    main > .Main2 > section > div:nth-child(2) > div { /*체크박스*/
+        position: absolute;
+        bottom: 2px;
+        right: 10px;
+        
+    }
+    main > .Main2 > section > div:nth-child(2) label { /*동의합니다*/
+        font-size: 12px;
+        line-height: 14.52px;
+        font-weight: bold;
+    }
+
+
+    .Main3 {
+        position: relative;
+
+        width: 600px;
+        height: 45px;
+        margin: 0 auto;
+    }
+    .Main3 > a:nth-of-type(1) { /*취소버튼*/
+        position: absolute;
+
+        width: 42px;
+        height: 35px;
+        right: 45px;
+        bottom: 0px;
+        border: 1px solid rgb(190, 190, 190);
+        box-sizing: border-box;
+
+        
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+
+        font-weight: bold;
+    }
+
+    .Main3 > a:nth-of-type(2) { /*다음버튼*/
+        position: absolute;
+          
+        width: 42px;
+        height: 35px;
+        right: 0px;
+        bottom: 0px;
+        border: 1px solid rgb(190, 190, 190);
+        box-sizing: border-box;
+
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+
+        font-weight: bold;
+           
+    }
+
+    .Main3 > a:hover {
+        background-color: rgb(142, 142, 142)
+    }
+
+    footer {
+        position: relative;
+        width: 790px;
+        height: 95px;
+        margin: 0 auto;
+
+    }
+    footer > span:nth-child(1) {
+        position: absolute;
+        left: 0px;
+        bottom: 0px;
+    }
+    footer > span:nth-child(2) {
+        position: absolute;
+        right: 0px;
+        bottom: 0px;
+    }
+
+
+</style>
+<body>
+    <div id="wrapper">
+    <header>
+        <div>
+            <span>Borad System</span>
+        </div>
+    </header>
+    <main>
+        <div class="Main1">
+            <section>
+                <div>
+                    <p>사이트 이용약관</p>
+                </div>
+                <div>
+                    <article></article>
+                    <div>
+                    <input type="checkbox" id="aa">
+                    <label for="aa">동의합니다</label>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <div class="Main2">
+            <section>
+                <div>
+                    <p>개인정보 취급방침</p>
+                </div>
+                <div>
+                    <article>
+                    </article>
+                    <div>
+                    <input type="checkbox" id="bb">
+                    <label for="bb">동의합니다</label>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <div class="Main3">
+            <a href="#">취소</a>
+            <a href="#">다음</a>
+        </div>
+    </main>
+    <footer>
+        <span>Copyrightⓒ 김철학(개발에 반하다.)</span>
+        <span>v1.0.1</span>
+    </footer>
+</div>
+</body>
+</html>

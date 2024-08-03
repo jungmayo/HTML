@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Board System</title>
+  <style>
+    *{
+      margin: 0px;
+      padding: 0px;
+      font: normal 12px '맑은고딕';
+    }
+    ul,ol {list-style: none;}
+    a {text-decoration: none; color: #111;}
+    #wrapper {
+      width: 100%;
+      height: 100%;
+    }
+    
+
+    header {
+      position: relative;
+      width: 800px;
+      height: 35px;
+      margin: 0 auto;
+    }
+    header span {
+      position: absolute;
+      font-weight: bold;
+      top: 10px;
+    }
+    header p {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+    }
+    header p > a:hover {
+      color: rgb(53, 53, 199);
+      text-decoration: underline;
+    }
+
+    main {
+      width: 800px;
+      margin: 0 auto;
+      position: relative;
+    }
+    
+    section {
+      width: 100%;
+      height: auto;
+      margin: 69px auto;
+      position: relative;
+    }
+    
+    main > section > nav {
+      position: relative;
+      width: 100%;
+      height: 51px;
+    }
+    main > section .List span {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+    }
+    main > section .Search {
+      position: relative;
+      width: 100%;
+      height: 51px;
+    
+    }
+    main > section .Search input[type="text"] {
+      position: absolute;
+      right: 40px;
+      width: 202px;
+      height: 28px;
+      border: none;
+      border: 1px solid rgb(172, 158, 158);
+    }
+
+    main > section .Search button {
+      position: absolute;
+      width: 38px;
+      height: 31px;
+      right: 0px;
+      border: none;
+      border: 1px solid rgb(172, 158, 158);
+      cursor: pointer;
+    }
+    main > section .Search button:hover {
+        background-color: rgb(154, 154, 154);
+    
+    }
+    main > section .Table {
+      border-collapse: collapse;
+      width: 100%;
+      height: auto
+    }
+    .Table thead {
+      width: 100%;
+      height: 41.5px;
+      background-color: rgb(229, 236, 239);
+      border-top: 1px solid #565555;
+    }
+    .Table thead > tr > th{
+      font-weight: bold;
+    }
+    .Table tbody > tr{
+      width: 100%;
+      height: 41px;
+      text-align: center;
+      border-top: 1px solid #bbb8b889; /* 행 위에 1px 두께의 회색 경계선 추가 */
+      border-bottom: 1px solid #bbb8b889;
+    }
+    .Table tbody > tr > td {
+        font-weight: bold;
+    }
+    .Table tbody > tr > td > a{
+        font-weight: bold;
+    }
+    .Table tbody > tr a:hover {
+      color: rgb(53, 53, 199);
+      text-decoration: underline;
+      font-weight: bold;
+    }
+    .numberList {
+      width: 100%;
+      height: 46.5px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 5px;
+    }
+    
+    .numberList > a {
+      display: inline-block;
+      margin: 0 2px;
+      font-weight: bold;
+      text-decoration: none;
+      color: rgb(0, 0, 0);
+      border: 1px solid rgb(172, 158, 158);
+      background-color: #F0F0F0;
+      text-align: center;
+      
+    }
+    .numberList > a:nth-child(1) {
+      margin-left: 300px;
+      width: 42px;
+      height: 35px;
+      line-height: 35px;
+    }
+    .numberList > a:nth-child(2),
+    .numberList > a:nth-child(3),
+    .numberList > a:nth-child(4) {
+      width: 24px;
+      height: 33px;
+      line-height: 33px;
+    }
+    .numberList > a:nth-child(5) {
+      width: 42px;
+      height: 35px;
+      line-height: 35px;
+    }
+
+    .numberList > a:nth-child(1):hover,
+    .numberList > a:nth-child(2):hover,
+    .numberList > a:nth-child(3):hover,
+    .numberList > a:nth-child(4):hover,
+    .numberList > a:nth-child(5):hover {background-color: rgb(154, 154, 154);}   
+    .numberList > a:nth-child(6):hover {background-color: rgb(89, 100, 111);}
+    
+    .numberList > a:last-of-type {
+      background-color: rgb(75, 84, 94);
+      color: white;
+      margin-left: auto; /* 오른쪽으로 밀어내기 */
+      width: 54px;
+      height: 35px;
+      line-height: 35px;
+    }
+
+    footer {
+      position: relative;
+      width: 800px;
+      height: 17px;
+      margin: 0 auto;
+    }
+    footer > span:nth-child(1) {
+        position: absolute;
+        left: 0px;
+        bottom: 0px;
+    }
+    footer > span:nth-child(2) {
+        position: absolute;
+        right: 0px;
+        bottom: 0px;
+    }
+
+
+  </style>
+</head>
+<body>
+    <div id="wrapper">
+    <header>
+        <div>
+            <span>Board System</span>
+            <p>홍길동님 반갑습니다
+                <a href="#">[로그아웃]</a>
+            </p>
+        </div>
+    </header>
+    <main>
+        <section>
+            <nav>
+                <div class="List">
+                  <span>글 목록</span>
+                </div>
+                <div class="Search">
+                  <form action="#" method="get">
+                    <input type="text" name="title" placeholder="제목,키워드,글쓴이">
+                    <button type="submit">검색</button>
+                  </form>
+                </div>
+              </nav>
+            <table class="Table">
+                <thead>
+                  <tr>
+                    <th>번호</th>
+                    <th>제목</th>
+                    <th>글쓴이</th>
+                    <th>날짜</th>
+                    <th>조회</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>1</td>
+                    <td><a href="#">테스트 제목입니다.[3]</a></td>
+                    <td>길동이</td>
+                    <td>20-05-12</td>
+                    <td>12</td>
+                  </tr>
+                </tbody>
+            </table>
+            <div class="numberList">
+              <a href="#">이전</a>
+              <a href="#">1</a>
+              <a href="#">2</a>
+              <a href="#">3</a>
+              <a href="#">다음</a>
+              <a href ="#">글쓰기</a> <!-- 글쓰기 버튼 -->
+            </div>
+        </section>
+    </main>
+    <footer>
+        <span>Copyrightⓒ 김하경(개발에 반하다.)</span>
+        <span>v1.0.1</span>
+    </footer>
+  </div>
+</body>
+</html>
