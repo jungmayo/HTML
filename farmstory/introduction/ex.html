@@ -77,11 +77,10 @@
             height: auto;
             transition: opacity 0.3s ease; /* 부드러운 전환 효과 */
         }
-        
-        .sideimage img:nth-child(2) { top: 26px; } /* 기본 이미지 위치 */
-        .sideimage img:nth-child(3) { top: 26px; opacity: 0; } /* Hover 이미지 위치 및 기본 숨김 */
-        .sideimage img:nth-child(4) { top: 61px; } /* 기본 이미지 위치 */
-        .sideimage img:nth-child(5) { top: 61px; opacity: 0; } /* Hover 이미지 위치 및 기본 숨김 */
+        .sideimage > img:nth-child(2) { top: 26px; } /* 기본 이미지 위치 */
+        .sideimage > img:nth-child(3) { top: 26px; opacity: 0; } /* Hover 이미지 위치 및 기본 숨김 */
+        .sideimage > img:nth-child(4) { top: 61px; } /* 기본 이미지 위치 */
+        .sideimage > img:nth-child(5) { top: 61px; opacity: 0; } /* Hover 이미지 위치 및 기본 숨김 */
 
         .sideimage img:hover:nth-child(2) { opacity: 0; } /* 기본 이미지가 호버 시 숨김 */
         .sideimage img:hover:nth-child(3) { opacity: 1; } /* Hover 이미지가 호버 시 보이게 */
@@ -183,12 +182,10 @@
                 </div>
                 <div class="sideimage">
                     <img src="./farmstory/sub_aside_bg_lnb.png"  alt="사이드 배경">
-                    
                     <img src="./farmstory/sub_cate1_lnb1.png" alt="1">
                     <img src="./farmstory/sub_cate1_lnb1_ov.png" alt="2">
                     <img src="./farmstory/sub_cate1_lnb2.png" alt="3">
                     <img src="./farmstory/sub_cate1_lnb2_ov.png" alt="4">
-                    
                 </div>
             </aside>
             <article>
@@ -221,5 +218,20 @@
     </main>
 
     <footer></footer>
+    <script>
+        const defaultImg = document.querySelector('.default-img');
+        const hoverImg = document.querySelector('.hover-img');
+
+        defaultImg.addEventListener('mouseenter', function() {
+            defaultImg.style.display = 'none'; // 기본 이미지 숨김
+            hoverImg.style.display = 'block'; // hover 이미지 표시
+        });
+
+        defaultImg.addEventListener('mouseleave', function() {
+            defaultImg.style.display = 'block'; // 기본 이미지 표시
+            hoverImg.style.display = 'none'; // hover 이미지 숨김
+        });
+    </script>
+</div>
 </body>
 </html>
