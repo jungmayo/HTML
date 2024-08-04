@@ -10,7 +10,7 @@
         *{
             margin: 0;
             padding: 0;
-            font: normal 12px '돋움';
+            font: normal 12px '맑은고딕';
         }
         * 
         ul,ol {list-style: none;}
@@ -20,66 +20,133 @@
         #wrapper {
         width: 100%;
         height: 100%;
-        border: 1px solid black;
-        box-sizing: border-box;
+       
     }
 
         main .Farmstory{
             width: 100%;
             height: auto;
-            border: 1px solid black;
-            box-sizing: border-box;
+            
         }
         main .Farmstory > .benner1 {
+            position: relative;
             width: 986px;
             height: 312px;
-            border: 1px solid red;
-            box-sizing: border-box;
+       
             margin: 0 auto;
             background-image: url(./images/farmstory/main_slide_img1.jpg);
         }
-        main div > div {
+        .benner1 > div {
             float: right;
             width: 230px;
             height: 312px;
-            border: 1px solid blue;
-            box-sizing: border-box;
+        
             margin: 0 auto;
             background-image: url(./images/farmstory/main_banner_bg.jpg);
+        }
+        .benner1 > img {
+            position: absolute;
+            top: 40px;
+            left: 40px;
+        }
+        .benner1 > div {
+            position: relative;
+        }
+        .benner1 > div > img:nth-child(1) {
+            position: absolute;
+            top: 175px;
+            left: 10px;
+        }
+        .benner1 > div > img:nth-child(2) {
+            position: absolute;
+            top: 31px;
+            left: 10px;
+        }
+        .benner1 > div > img:nth-child(3) {
+            position: absolute;
+            top: 10px;
+            left: 165px;
         }
 
         main .bestitem {
             width: 100%;
             height: auto;
-            border: 1px solid orange;
-            box-sizing: border-box;
+      
         }
 
-        main .bestitem > div {
-            width: 986px;
-            height: 236px;
-            border: 1px solid red;
-            box-sizing: border-box;
-            margin: 0 auto;
-
-        }
-        main .bestitem > img {
+        main .bestitem > div:nth-child(1) {
             width: 986px;
             height: 70px;
-            border: 1px solid green;
-            box-sizing: border-box;
+         
             margin: 0 auto;
             display: block;
+            
         }
- 
-        main .bestitem > div > a > article {
-            float: left;
-            width: 16.66%;
-            height: 236px;
-            border: 1px solid green;
-            box-sizing: border-box;
+        main .bestitem > div > img {
+            margin-top: 15px;
         }
 
+        main .bestitem > div:nth-child(2) {
+            width: 986px;
+            height: 236px;
+       
+            margin: 0 auto;
+            display: flex; /* Flexbox 사용 */
+        }
+
+        main .bestitem > div > a {
+            width: 16.66%;
+            height: 236px;
+            border: 1px solid rgba(137, 137, 137, 0.468);
+            box-sizing: border-box;
+            margin-right: 7px;
+        }
+
+        main .bestitem > div > a:nth-child(1){
+            margin-left: 3px;
+        }
+        main .bestitem > div > a > article {
+            display: flex; /* Flexbox 사용 */
+            flex-direction: column; /* 세로 방향으로 정렬 */
+            justify-content: center; /* 세로 중앙 정렬 */
+            align-items: center; /* 가로 중앙 정렬 */
+            height: 100%; /* 부모 요소 높이에 맞춤 */
+        }
+        main .bestitem >div > a> article > img {
+            margin-bottom: 10px;
+        }
+        main .bestitem >div > a> article > h1 {
+            margin-bottom: 10px;
+            color: gray;
+            font-weight: 300;
+            
+        }
+        main .bestitem >div > a> article > p {
+            margin-bottom: 5px;
+            font-weight: 500;
+            
+        }
+        .pricediscount {
+            display: flex;
+            margin-left: 5px;
+
+        }
+        .price , .discount {
+            margin-right: 3px;
+            margin-bottom: 7px;
+            font-size: 7px;
+            
+        }
+        .price {
+            text-decoration: line-through;
+        }
+        .discount {
+            color: red;
+        }
+        main .bestitem >div > a> article > h3 {
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
     </style>
 </head>
 <body>
@@ -98,14 +165,17 @@
         </div>
        </section>
        <section class="bestitem">
-        <img> 
+        <div><img src="./images/farmstory/main_market_tit.png" alt="베스트 상품"> </div>
         <div>
         <a href="#">
             <article>
                 <img src="./images/farmstory/market_item1.jpg" alt="사과">
                 <h1>과일</h1>
                 <p>사과 500g</p>
-                <span>4000원 10%</span>
+                <div class="pricediscount">
+                    <span class="price">4000원</span>
+                    <span class="discount">10%↓</span>
+                </div>
                 <h3>3,600원</h3>
             </article>
                 
@@ -115,7 +185,10 @@
                 <img src="./images/farmstory/market_item2.jpg" alt="사과">
                 <h1>과일</h1>
                 <p>사과 500g</p>
-                <span>4000원 10%</span>
+                <div class="pricediscount">
+                    <span class="price">4000원</span>
+                    <span class="discount">10%↓</span>
+                </div>
                 <h3>3,600원</h3>
             </article>
         </a>
@@ -124,7 +197,10 @@
                 <img src="./images/farmstory/market_item3.jpg" alt="사과">
                 <h1>과일</h1>
                 <p>사과 500g</p>
-                <span>4000원 10%</span>
+                <div class="pricediscount">
+                    <span class="price">4000원</span>
+                    <span class="discount">10%↓</span>
+                </div>
                 <h3>3,600원</h3>
             </article>
         </a>
@@ -133,7 +209,10 @@
                 <img src="./images/farmstory/market_item4.jpg" alt="사과">
                 <h1>과일</h1>
                 <p>사과 500g</p>
-                <span>4000원 10%</span>
+                <div class="pricediscount">
+                    <span class="price">4000원</span>
+                    <span class="discount">10%↓</span>
+                </div>
                 <h3>3,600원</h3>
             </article>
         </a>
@@ -142,7 +221,10 @@
                 <img src="./images/farmstory/market_item5.jpg" alt="사과">
                 <h1>과일</h1>
                 <p>사과 500g</p>
-                <span>4000원 10%</span>
+                <div class="pricediscount">
+                    <span class="price">4000원</span>
+                    <span class="discount">10%↓</span>
+                </div>
                 <h3>3,600원</h3>
             </article>
         </a>
@@ -151,7 +233,10 @@
                 <img src="./images/farmstory/market_item6.jpg" alt="사과">
                 <h1>과일</h1>
                 <p>사과 500g</p>
-                <span>4000원 10%</span>
+                <div class="pricediscount">
+                    <span class="price">4000원</span>
+                    <span class="discount">10%↓</span>
+                </div>
                 <h3>3,600원</h3>
             </article>
         </a>
@@ -163,3 +248,5 @@
     <div>
 </body>
 </html>
+
+
