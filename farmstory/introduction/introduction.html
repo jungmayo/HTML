@@ -70,7 +70,7 @@
             width: 175px;
             height: 233px;
         }
-        .sideimage > img {
+        .sideimage  img {
             position: absolute;
             left: 0;
             width: 100%;
@@ -78,15 +78,15 @@
             transition: opacity 0.3s ease; /* 부드러운 전환 효과 */
         }
         
-        .sideimage img:nth-child(2) { top: 26px; } /* 기본 이미지 위치 */
-        .sideimage img:nth-child(3) { top: 26px; opacity: 0; } /* Hover 이미지 위치 및 기본 숨김 */
-        .sideimage img:nth-child(4) { top: 61px; } /* 기본 이미지 위치 */
-        .sideimage img:nth-child(5) { top: 61px; opacity: 0; } /* Hover 이미지 위치 및 기본 숨김 */
+        .sideimage .greet img:nth-child(1) { top: 26px; } /* 기본 이미지 위치 */
+        .sideimage .greet img:nth-child(2) { top: 26px; opacity: 0; } /* Hover 이미지 위치 및 기본 숨김 */
+        .sideimage .way img:nth-child(1) { top: 61px; } /* 기본 이미지 위치 */
+        .sideimage .way img:nth-child(2) { top: 61px; opacity: 0; } /* Hover 이미지 위치 및 기본 숨김 */
 
-        .sideimage img:hover:nth-child(2) { opacity: 0; } /* 기본 이미지가 호버 시 숨김 */
-        .sideimage img:hover:nth-child(3) { opacity: 1; } /* Hover 이미지가 호버 시 보이게 */
-        .sideimage img:hover:nth-child(4) { opacity: 0; } /* 기본 이미지가 호버 시 숨김 */
-        .sideimage img:hover:nth-child(5) { opacity: 1; } /* Hover 이미지가 호버 시 보이게 */
+        .sideimage .greet img:hover:nth-child(1) { opacity: 0; } /* 기본 이미지가 호버 시 숨김 */
+        .sideimage .greet img:hover:nth-child(2) { opacity: 1; } /* Hover 이미지가 호버 시 보이게 */
+        .sideimage .way img:hover:nth-child(1) { opacity: 0; } /* 기본 이미지가 호버 시 숨김 */
+        .sideimage .way img:hover:nth-child(2) { opacity: 1; } /* Hover 이미지가 호버 시 보이게 */
 
         main section article {
             flex-grow: 1;
@@ -183,11 +183,15 @@
                 </div>
                 <div class="sideimage">
                     <img src="./farmstory/sub_aside_bg_lnb.png"  alt="사이드 배경">
-                    
+                    <a href="#" class="greet">
                     <img src="./farmstory/sub_cate1_lnb1.png" alt="1">
                     <img src="./farmstory/sub_cate1_lnb1_ov.png" alt="2">
-                    <img src="./farmstory/sub_cate1_lnb2.png" alt="3">
-                    <img src="./farmstory/sub_cate1_lnb2_ov.png" alt="4">
+                    </a>
+                    <a href="#" class="way">
+
+                        <img src="./farmstory/sub_cate1_lnb2.png" alt="3">
+                        <img src="./farmstory/sub_cate1_lnb2_ov.png" alt="4">
+                    </a>
                     
                 </div>
             </aside>
